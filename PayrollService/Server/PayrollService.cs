@@ -21,12 +21,10 @@ namespace PayrollService.Server
                     taxesDeductions += grossSalary * taxRole.TaxPercent / 100;
                     continue;
                 }
-                if( grossSalary > taxRole.MinSalary && grossSalary <= taxRole.MaxSalary )
-                {
-                    taxesDeductions += ( grossSalary - taxRole.MinSalary ) * taxRole.TaxPercent / 100;
-                    continue;
-                }
-                else if( grossSalary > taxRole.MinSalary && taxRole.MaxSalary == 0 )
+                if( 
+                    (grossSalary > taxRole.MinSalary && grossSalary <= taxRole.MaxSalary ) || 
+                    ( grossSalary > taxRole.MinSalary && taxRole.MaxSalary == 0 ) 
+                  )
                 {
                     taxesDeductions += ( grossSalary - taxRole.MinSalary ) * taxRole.TaxPercent / 100;
                     continue;
