@@ -154,7 +154,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Middle\Payroll.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\PayrollServiceContext.cs" />
     <Compile Include="Models\TaxRole.cs" />
